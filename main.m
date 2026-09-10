@@ -143,7 +143,8 @@ static NSArray<NSArray *> *Durations(void) {
         // bake the color into the image — NSStatusBarButton ignores contentTintColor
         // on template images and just draws them in the menu bar color
         image = [image imageWithSymbolConfiguration:
-            [NSImageSymbolConfiguration configurationWithPaletteColors:@[[NSColor systemGreenColor]]]];
+            [NSImageSymbolConfiguration configurationWithPaletteColors:
+                @[[NSColor colorWithSRGBRed:0.54 green:0.35 blue:0.23 alpha:1.0]]]]; // mocha brown
         image.template = NO;
     }
     self.statusItem.button.image = image;

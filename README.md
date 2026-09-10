@@ -2,7 +2,7 @@
 
 A tiny macOS menu bar app for toggling [`caffeinate`](https://ss64.com/mac/caffeinate.html) — keep your Mac awake without opening a terminal.
 
-☕ **Left-click** the cup in the menu bar to toggle. Filled green cup = awake, outline = normal sleep behavior.
+☕ **Left-click** the cup in the menu bar to toggle. Filled mocha-brown cup = awake, outline = normal sleep behavior.
 
 🖱️ **Right-click** (or ⌃-click) for settings:
 

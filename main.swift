@@ -132,7 +132,8 @@ final class App: NSObject, NSApplicationDelegate {
         if isActive {
             // bake the color into the image — NSStatusBarButton ignores contentTintColor
             // on template images and just draws them in the menu bar color
-            image = image?.withSymbolConfiguration(.init(paletteColors: [.systemGreen]))
+            image = image?.withSymbolConfiguration(.init(paletteColors:
+                [NSColor(srgbRed: 0.54, green: 0.35, blue: 0.23, alpha: 1.0)])) // mocha brown
             image?.isTemplate = false
         }
         statusItem.button?.image = image
