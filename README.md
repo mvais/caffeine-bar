@@ -1,6 +1,14 @@
-# caffeine-bar
+<p align="center">
+  <img src="assets/logo.svg" width="150" alt="caffeine-bar logo — a mocha coffee cup with steam">
+</p>
 
-A tiny macOS menu bar app for toggling [`caffeinate`](https://ss64.com/mac/caffeinate.html) — keep your Mac awake without opening a terminal.
+<h1 align="center">caffeine-bar</h1>
+
+<p align="center">A tiny macOS menu bar app for toggling <a href="https://ss64.com/mac/caffeinate.html"><code>caffeinate</code></a> — keep your Mac awake without opening a terminal.</p>
+
+<p align="center">
+  <a href="#install">Install</a> · <a href="#source">Source</a> · <a href="LICENSE">License</a>
+</p>
 
 ☕ **Left-click** the cup in the menu bar to toggle. Filled mocha-brown cup = awake, outline = normal sleep behavior.
 
@@ -40,4 +48,4 @@ The app is ad-hoc signed, so if Gatekeeper complains on first launch, right-clic
 
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE) — covers the code and the logo artwork (`assets/logo.svg`).

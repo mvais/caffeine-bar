@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 200" width="220" height="200">
+  <defs>
+    <linearGradient id="mocha" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#A0704B"/>
+      <stop offset="1" stop-color="#6F4529"/>
+    </linearGradient>
+  </defs>
+  <!-- steam -->
+  <path d="M88 22 c-9 13 9 19 0 32" stroke="#B08968" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.75"/>
+  <path d="M122 16 c-9 13 9 19 0 32" stroke="#B08968" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.75"/>
+  <!-- saucer -->
+  <ellipse cx="105" cy="166" rx="74" ry="13" fill="#5C3A22"/>
+  <!-- handle -->
+  <path d="M160 88 c26 -2 26 42 -2 38" stroke="#6F4529" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <!-- cup -->
+  <path d="M50 72 h110 v36 a55 46 0 0 1 -110 0 z" fill="url(#mocha)"/>
+  <!-- coffee surface -->
+  <ellipse cx="105" cy="72" rx="55" ry="10" fill="#4A2E1A"/>
+  <ellipse cx="105" cy="71" rx="47" ry="7.5" fill="#8A5A3B"/>
+</svg>
