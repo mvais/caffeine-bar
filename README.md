@@ -19,7 +19,7 @@ No dependencies, no dock icon, no background daemons — just a ~180-line wrappe
 
 ## Install
 
-Requires macOS 11+ and the Xcode Command Line Tools (`xcode-select --install`).
+Requires macOS 12+ and the Xcode Command Line Tools (`xcode-select --install`).
 
 ```sh
 git clone https://github.com/mvais/caffeine-bar.git

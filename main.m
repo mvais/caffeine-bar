@@ -138,10 +138,15 @@ static NSArray<NSArray *> *Durations(void) {
 
 - (void)updateIcon {
     NSString *name = self.isActive ? @"cup.and.saucer.fill" : @"cup.and.saucer";
-    self.statusItem.button.image = [NSImage imageWithSystemSymbolName:name
-                                             accessibilityDescription:@"Caffeinate"];
-    // nil = standard menu bar color (adapts to light/dark); green = active
-    self.statusItem.button.contentTintColor = self.isActive ? [NSColor systemGreenColor] : nil;
+    NSImage *image = [NSImage imageWithSystemSymbolName:name accessibilityDescription:@"Caffeinate"];
+    if (self.isActive) {
+        // bake the color into the image — NSStatusBarButton ignores contentTintColor
+        // on template images and just draws them in the menu bar color
+        image = [image imageWithSymbolConfiguration:
+            [NSImageSymbolConfiguration configurationWithPaletteColors:@[[NSColor systemGreenColor]]]];
+        image.template = NO;
+    }
+    self.statusItem.button.image = image;
     self.statusItem.button.toolTip = self.isActive ? @"Caffeinate is on — click to disable"
                                                    : @"Caffeinate is off — click to enable";
 }

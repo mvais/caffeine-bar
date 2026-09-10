@@ -128,10 +128,14 @@ final class App: NSObject, NSApplicationDelegate {
 
     func updateIcon() {
         let name = isActive ? "cup.and.saucer.fill" : "cup.and.saucer"
-        statusItem.button?.image = NSImage(systemSymbolName: name,
-                                           accessibilityDescription: "Caffeinate")
-        // nil = standard menu bar color (adapts to light/dark); green = active
-        statusItem.button?.contentTintColor = isActive ? .systemGreen : nil
+        var image = NSImage(systemSymbolName: name, accessibilityDescription: "Caffeinate")
+        if isActive {
+            // bake the color into the image — NSStatusBarButton ignores contentTintColor
+            // on template images and just draws them in the menu bar color
+            image = image?.withSymbolConfiguration(.init(paletteColors: [.systemGreen]))
+            image?.isTemplate = false
+        }
+        statusItem.button?.image = image
         statusItem.button?.toolTip = isActive ? "Caffeinate is on — click to disable"
                                               : "Caffeinate is off — click to enable"
     }
